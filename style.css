@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap");
 
 .sedgwick-ave-regular {
-  font-family: "Sedgwick Ave", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Sedgwick Ave", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .bg-img {
- background-image: url("https://robong.me/images/home-bg.webp?v=0.1");
- background-color: #cccccc;
+    background-image: url("https://robong.me/images/home-bg.webp?v=0.1");
+    background-color: #cccccc;
 }
 
 .bgg-img {
- background-image: url("https://robong.me/images/home-bg2.webp");
- background-color: #cccccc;
+    background-image: url("https://robong.me/images/home-bg2.webp");
+    background-color: #cccccc;
 }
 
 html {
