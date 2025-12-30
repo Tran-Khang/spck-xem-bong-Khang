@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lịch thi đấu - Siuuuuuuuuuuuu</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        />
+    </head>
+    <body class="bg-[#232227]">
+        <!-- HEADER -->
+        <div id="top_navbar" class="bg-[#232227] w-full">
+            <header class="flex justify-between items-center py-5 px-5">
+                <a href="trangchu.html">
+                    <img
+                        src="logo.png"
+                        alt="logo"
+                        class="w-40 h-20 object-cover"
+                    />
+                </a>
+                <a href="trangchu.html" class="text-white text-sm font-bold">
+                    <p>Trang chủ</p>
+                </a>
+                <a
+                    href="lichthidau.html"
+                    class="text-red-500 text-sm font-bold"
+                >
+                    <p>Lịch thi đấu</p>
+                </a>
+                <a href="ketqua.html" class="text-white text-sm font-bold">
+                    <p>Kết quả</p>
+                </a>
+                <a href="trangchu.html" class="text-white text-sm font-bold">
+                    <p>Xem lại</p>
+                </a>
+                <a href="bangxephang.html" class="text-white text-sm font-bold">
+                    <p>Bảng xếp hạng</p>
+                </a>
+                <a href="trangchu.html" class="text-white text-sm font-bold">
+                    <p>Siuuuuuuuuuuuu phim</p>
+                </a>
+                <a
+                    href="tairobong.html"
+                    class="text-white text-sm font-bold flex items-center"
+                >
+                    <div class="flex flex-col px-4">
+                        <p class="text-sm font-medium">Tải ứng dụng</p>
+                        <p class="text-lg font-medium">Siuuuuuuuuuuuu</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-px h-10 bg-gray-300"></div>
+                        <div
+                            class="w-10 h-10 rounded-full border border-[#e1dfe9] bg-[#232227] flex items-center justify-center"
+                        >
+                            <i class="fa-solid fa-user text-white"></i>
+                        </div>
+                    </div>
+                </a>
+            </header>
+            <div class="flex px-5 items-center justify-left gap-15 text-2xl">
+                <div class="flex items-center justify-center gap-2">
+                    <img
+                        src="https://robong.me/images/icons/live.webp"
+                        alt=""
+                        class="w-6 h-6 rounded-md"
+                    />
+                    <p class="text-sm text-white">Trực tiếp</p>
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <img
+                        src="https://robong.me/images/icons/football.webp"
+                        alt=""
+                        class="w-6 h-6 rounded-md"
+                    />
+                    <p class="text-sm text-white">Bóng đá</p>
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <img
+                        src="https://robong.me/images/icons/basketball.webp"
+                        alt=""
+                        class="w-6 h-6 rounded-md"
+                    />
+                    <p class="text-sm text-white">Bóng rổ</p>
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <img
+                        src="https://robong.me/images/icons/volleyball.webp"
+                        alt=""
+                        class="w-6 h-6 rounded-md"
+                    />
+                    <p class="text-sm text-white">Bóng chuyền</p>
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <img
+                        src="https://robong.me/images/icons/tennis.webp"
+                        alt=""
+                        class="w-6 h-6 rounded-md"
+                    />
+                    <p class="text-sm text-white">Tennis</p>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                <hr class="my-4 border-gray-100/60" />
+            </div>
+        </div>
+
+        <!-- LỊCH THI ĐẤU CONTENT -->
+        <div class="px-6 py-8 max-w-6xl mx-auto">
+            <!-- Header Section -->
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-white mb-2">LỊCH THI ĐẤU</h1>
+                <p class="text-gray-400">
+                    Xem lịch thi đấu các môn thể thao hôm nay và trong tuần
+                </p>
+            </div>
+
+            <!-- Filter Section -->
+            <div class="bg-[#2C2F34] rounded-2xl p-6 mb-8">
+                <div class="flex flex-wrap gap-4">
+                    <button
+                        class="bg-red-600 text-white px-6 py-2 rounded-lg font-bold"
+                    >
+                        HÔM NAY
+                    </button>
+                    <button
+                        class="bg-[#373A40] text-white px-6 py-2 rounded-lg hover:bg-[#4a4d55]"
+                    >
+                        NGÀY MAI
+                    </button>
+                    <button
+                        class="bg-[#373A40] text-white px-6 py-2 rounded-lg hover:bg-[#4a4d55]"
+                    >
+                        7 NGÀY TỚI
+                    </button>
+                    <select
+                        class="bg-[#373A40] text-white px-4 py-2 rounded-lg"
+                    >
+                        <option value="all">Tất cả môn</option>
+                        <option value="football">Bóng đá</option>
+                        <option value="basketball">Bóng rổ</option>
+                        <option value="tennis">Tennis</option>
+                    </select>
+                    <select
+                        class="bg-[#373A40] text-white px-4 py-2 rounded-lg"
+                    >
+                        <option value="all">Tất cả giải</option>
+                        <option value="premier">Premier League</option>
+                        <option value="laliga">La Liga</option>
+                        <option value="bundes">Bundesliga</option>
+                    </select>
+                </div>
+
+                <!-- Date Navigation -->
+                <div class="flex items-center justify-between mt-6">
+                    <button class="text-white hover:text-red-400">
+                        <i class="fas fa-chevron-left mr-2"></i> Hôm qua
+                    </button>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-white">
+                            Thứ 3, 30/12/2025
+                        </h3>
+                        <p class="text-gray-400">Hôm nay có 28 trận đấu</p>
+                    </div>
+                    <button class="text-white hover:text-red-400">
+                        Ngày mai <i class="fas fa-chevron-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Matches Timeline -->
+            <div class="space-y-6">
+                <!-- Time Slot 1 -->
+                <div class="mb-10">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div
+                            class="bg-red-600 text-white px-4 py-1 rounded-full"
+                        >
+                            TRỰC TIẾP
+                        </div>
+                        <h2 class="text-2xl font-bold text-white">
+                            19:00 - 21:00
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <!-- Match 1 -->
+                        <div
+                            class="bg-[#2C2F34] rounded-2xl p-6 hover:bg-[#373A40] transition-colors"
+                        >
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <div
+                                        class="text-[#FF5252] font-bold text-sm mb-1"
+                                    >
+                                        TRỰC TIẾP
+                                    </div>
+                                    <div class="text-gray-400 text-sm">
+                                        AFF Cup 2024 • Chung kết
+                                    </div>
+                                </div>
+                                <div class="text-white font-bold">19:30</div>
+                            </div>
+                            <div class="flex justify-between items-center mb-6">
+                                <div class="text-center w-1/3">
+                                    <div
+                                        class="w-16 h-12 bg-white rounded flex items-center justify-center mx-auto mb-2 overflow-hidden"
+                                    >
+                                        <img
+                                            src="https://flagcdn.com/vn.svg"
+                                            class="w-12 h-8 object-cover"
+                                        />
+                                    </div>
+                                    <p class="text-white font-bold">Việt Nam</p>
+                                </div>
+                                <div class="text-center w-1/3">
+                                    <div class="text-gray-400 text-xs mb-1">
+                                        HIỆP 1
+                                    </div>
+                                    <div class="text-3xl font-bold text-white">
+                                        2 - 1
+                                    </div>
+                                    <p class="text-gray-400 text-sm mt-1">
+                                        Phút 45'
+                                    </p>
+                                </div>
+                                <div class="text-center w-1/3">
+                                    <div
+                                        class="w-16 h-12 bg-white rounded flex items-center justify-center mx-auto mb-2 overflow-hidden"
+                                    >
+                                        <img
+                                            src="https://flagcdn.com/th.svg"
+                                            class="w-12 h-8 object-cover"
+                                        />
+                                    </div>
+                                    <p class="text-white font-bold">Thái Lan</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between">
+                                <button
+                                    class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm"
+                                >
+                                    <i class="fas fa-play mr-2"></i> XEM LIVE
+                                </button>
+                                <button
+                                    class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm"
+                                >
+                                    <i class="far fa-bell mr-2"></i> NHẮC TÔI
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Match 2 -->
+                        <div
+                            class="bg-[#2C2F34] rounded-2xl p-6 hover:bg-[#373A40] transition-colors"
+                        >
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <div
+                                        class="text-green-500 font-bold text-sm mb-1"
+                                    >
+                                        SẮP DIỄN RA
+                                    </div>
+                                    <div class="text-gray-400 text-sm">
+                                        Premier League • Vòng 20
+                                    </div>
+                                </div>
+                                <div class="text-white font-bold">21:00</div>
+                            </div>
+                            <div class="flex justify-between items-center mb-6">
+                                <div class="text-center w-1/3">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2"
+                                    >
+                                        <img
+                                            src="https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg"
+                                            class="w-8 h-8"
+                                        />
+                                    </div>
+                                    <p class="text-white font-bold">Arsenal</p>
+                                </div>
+                                <div class="text-center w-1/3">
+                                    <div class="text-gray-400 text-xs mb-1">
+                                        SẮP BẮT ĐẦU
+                                    </div>
+                                    <div
+                                        class="text-3xl font-bold text-gray-400"
+                                    >
+                                        - -
+                                    </div>
+                                </div>
+                                <div class="text-center w-1/3">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2"
+                                    >
+                                        <img
+                                            src="https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg"
+                                            class="w-8 h-8"
+                                        />
+                                    </div>
+                                    <p class="text-white font-bold">Chelsea</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between">
+                                <button
+                                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm"
+                                >
+                                    <i class="fas fa-shopping-cart mr-2"></i>
+                                    MUA VÉ
+                                </button>
+                                <button
+                                    class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm"
+                                >
+                                    <i class="far fa-bell mr-2"></i> NHẮC TÔI
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Time Slot 2 -->
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold text-white mb-4">
+                        21:00 - 23:00
+                    </h2>
+                    <div class="grid grid-cols-2 gap-6">
+                        <!-- Match 3 -->
+                        <div
+                            class="bg-[#2C2F34] rounded-2xl p-6 hover:bg-[#373A40] transition-colors"
+                        >
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <div
+                                        class="text-green-500 font-bold text-sm mb-1"
+                                    >
+                                        SẮP DIỄN RA
+                                    </div>
+                                    <div class="text-gray-400 text-sm">
+                                        La Liga • Vòng 18
+                                    </div>
+                                </div>
+                                <div class="text-white font-bold">22:00</div>
+                            </div>
+                            <div class="flex justify-between items-center mb-6">
+                                <div class="text-center w-1/3">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2"
+                                    >
+                                        <img
+                                            src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg"
+                                            class="w-8 h-8"
+                                        />
+                                    </div>
+                                    <p class="text-white font-bold">
+                                        Real Madrid
+                                    </p>
+                                </div>
+                                <div class="text-center w-1/3">
+                                    <div class="text-gray-400 text-xs mb-1">
+                                        SẮP BẮT ĐẦU
+                                    </div>
+                                    <div
+                                        class="text-3xl font-bold text-gray-400"
+                                    >
+                                        - -
+                                    </div>
+                                </div>
+                                <div class="text-center w-1/3">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2"
+                                    >
+                                        <img
+                                            src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg"
+                                            class="w-8 h-8"
+                                        />
+                                    </div>
+                                    <p class="text-white font-bold">
+                                        Barcelona
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between">
+                                <button
+                                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm"
+                                >
+                                    <i class="fas fa-shopping-cart mr-2"></i>
+                                    MUA VÉ
+                                </button>
+                                <button
+                                    class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm"
+                                >
+                                    <i class="far fa-bell mr-2"></i> NHẮC TÔI
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Match 4 -->
+                        <div
+                            class="bg-[#2C2F34] rounded-2xl p-6 hover:bg-[#373A40] transition-colors"
+                        >
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <div
+                                        class="text-green-500 font-bold text-sm mb-1"
+                                    >
+                                        SẮP DIỄN RA
+                                    </div>
+                                    <div class="text-gray-400 text-sm">
+                                        Bundesliga • Vòng 17
+                                    </div>
+                                </div>
+                                <div class="text-white font-bold">23:30</div>
+                            </div>
+                            <div class="flex justify-between items-center mb-6">
+                                <div class="text-center w-1/3">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2"
+                                    >
+                                        <img
+                                            src="https://upload.wikimedia.org/wikipedia/commons/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg"
+                                            class="w-8 h-8"
+                                        />
+                                    </div>
+                                    <p class="text-white font-bold">Bayern</p>
+                                </div>
+                                <div class="text-center w-1/3">
+                                    <div class="text-gray-400 text-xs mb-1">
+                                        SẮP BẮT ĐẦU
+                                    </div>
+                                    <div
+                                        class="text-3xl font-bold text-gray-400"
+                                    >
+                                        - -
+                                    </div>
+                                </div>
+                                <div class="text-center w-1/3">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2"
+                                    >
+                                        <img
+                                            src="https://upload.wikimedia.org/wikipedia/commons/6/67/Borussia_Dortmund_logo.svg"
+                                            class="w-8 h-8"
+                                        />
+                                    </div>
+                                    <p class="text-white font-bold">Dortmund</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between">
+                                <button
+                                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm"
+                                >
+                                    <i class="fas fa-shopping-cart mr-2"></i>
+                                    MUA VÉ
+                                </button>
+                                <button
+                                    class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm"
+                                >
+                                    <i class="far fa-bell mr-2"></i> NHẮC TÔI
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Time Slot 3 -->
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold text-white mb-4">
+                        00:00 - 03:00
+                    </h2>
+                    <div class="grid grid-cols-2 gap-6">
+                        <!-- Match 5 -->
+                        <div
+                            class="bg-[#2C2F34] rounded-2xl p-6 hover:bg-[#373A40] transition-colors"
+                        >
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <div
+                                        class="text-green-500 font-bold text-sm mb-1"
+                                    >
+                                        ĐÊM NAY
+                                    </div>
+                                    <div class="text-gray-400 text-sm">
+                                        Serie A • Vòng 19
+                                    </div>
+                                </div>
+                                <div class="text-white font-bold">01:45</div>
+                            </div>
+                            <div class="flex justify-between items-center mb-6">
+                                <div class="text-center w-1/3">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2"
+                                    >
+                                        <img
+                                            src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_of_AC_Milan.svg"
+                                            class="w-8 h-8"
+                                        />
+                                    </div>
+                                    <p class="text-white font-bold">AC Milan</p>
+                                </div>
+                                <div class="text-center w-1/3">
+                                    <div class="text-gray-400 text-xs mb-1">
+                                        SẮP BẮT ĐẦU
+                                    </div>
+                                    <div
+                                        class="text-3xl font-bold text-gray-400"
+                                    >
+                                        - -
+                                    </div>
+                                </div>
+                                <div class="text-center w-1/3">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2"
+                                    >
+                                        <img
+                                            src="https://upload.wikimedia.org/wikipedia/commons/0/05/FC_Internazionale_Milano_2021.svg"
+                                            class="w-8 h-8"
+                                        />
+                                    </div>
+                                    <p class="text-white font-bold">Inter</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between">
+                                <button
+                                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm"
+                                >
+                                    <i class="fas fa-shopping-cart mr-2"></i>
+                                    MUA VÉ
+                                </button>
+                                <button
+                                    class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm"
+                                >
+                                    <i class="far fa-bell mr-2"></i> NHẮC TÔI
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Match 6 -->
+                        <div
+                            class="bg-[#2C2F34] rounded-2xl p-6 hover:bg-[#373A40] transition-colors"
+                        >
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <div
+                                        class="text-green-500 font-bold text-sm mb-1"
+                                    >
+                                        ĐÊM NAY
+                                    </div>
+                                    <div class="text-gray-400 text-sm">
+                                        Champions League
+                                    </div>
+                                </div>
+                                <div class="text-white font-bold">03:00</div>
+                            </div>
+                            <div class="flex justify-between items-center mb-6">
+                                <div class="text-center w-1/3">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2"
+                                    >
+                                        <img
+                                            src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg"
+                                            class="w-8 h-8"
+                                        />
+                                    </div>
+                                    <p class="text-white font-bold">
+                                        Barcelona
+                                    </p>
+                                </div>
+                                <div class="text-center w-1/3">
+                                    <div class="text-gray-400 text-xs mb-1">
+                                        SẮP BẮT ĐẦU
+                                    </div>
+                                    <div
+                                        class="text-3xl font-bold text-gray-400"
+                                    >
+                                        - -
+                                    </div>
+                                </div>
+                                <div class="text-center w-1/3">
+                                    <div
+                                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2"
+                                    >
+                                        <img
+                                            src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg"
+                                            class="w-8 h-8"
+                                        />
+                                    </div>
+                                    <p class="text-white font-bold">
+                                        Real Madrid
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between">
+                                <button
+                                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm"
+                                >
+                                    <i class="fas fa-shopping-cart mr-2"></i>
+                                    MUA VÉ
+                                </button>
+                                <button
+                                    class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm"
+                                >
+                                    <i class="far fa-bell mr-2"></i> NHẮC TÔI
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Matches Button -->
+            <div class="text-center mt-10">
+                <button
+                    class="bg-[#373A40] hover:bg-[#4a4d55] text-white px-8 py-3 rounded-lg font-bold"
+                >
+                    <i class="fas fa-chevron-down mr-2"></i> XEM THÊM LỊCH THI
+                    ĐẤU
+                </button>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="w-full bg-black/40 text-white py-8 mt-20">
+            <div class="max-w-6xl mx-auto text-center px-4">
+                <h3 class="text-lg font-semibold mb-3">Siuuuuuuuuuuuuu</h3>
+                <p class="text-white/60 text-sm">
+                    Nền tảng xem bóng đá trực tiếp chất lượng cao – Full HD, tốc
+                    độ mượt, miễn phí.
+                </p>
+                <div class="flex justify-center gap-6 text-xl mt-5">
+                    <a href="#" class="text-white/60 hover:text-white"
+                        ><i class="fa-brands fa-facebook"></i
+                    ></a>
+                    <a href="#" class="text-white/60 hover:text-white"
+                        ><i class="fa-brands fa-youtube"></i
+                    ></a>
+                    <a href="#" class="text-white/60 hover:text-white"
+                        ><i class="fa-brands fa-tiktok"></i
+                    ></a>
+                </div>
+                <p class="text-white/40 text-xs mt-6">
+                    © 2025 Siuuuuuuuuuuuu. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
